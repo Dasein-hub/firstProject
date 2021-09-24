@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const { dbURI } = require('./dbURI')
 
 const app = express();
-const dbURI = "mongodb+srv://dasein:12345@firstcluster.kbibr.mongodb.net/firstProject?retryWrites=true&w=majority"
 mongoose.connect(dbURI)
     .then(result => {
         app.listen(3000)
