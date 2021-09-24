@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { dbURI } = require('./dbURI')
+const postRouter = require('./routes/postRouter');
 
 const app = express();
 mongoose.connect(dbURI)
@@ -15,7 +16,5 @@ mongoose.connect(dbURI)
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
+app.use(postRouter)
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
