@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/profile/profile.css">
+    <link rel="stylesheet" href="../public//css/index/posts.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header">
+                <h1>Blog</h1>
+
+                <form action="/blogs" method="get">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                </form>
+
+                <div class="button">
+                    <a href="/profile">
+                        Profile
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile">
+            <div class="profileImg">
+                <img src="../public/img/imgPlaceholder.png" alt="">
+
+                <button class="modalBtn">
+                    New post
+                </button>
+            </div>
+
+            <div class="profileInfo">
+                <p>First Name</p>
+                <p>Last name</p>
+                <p>Quantity of posts: 10</p>
+                <p>Email: asdf@gmail.com</p>
+                <p id="lastP">Data of registration: 10/10/2021</p>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <form action="/profile" method="post">
+                    <input type="text" name="title" id="postTitle" placeholder="Post title">
+
+                    <!-- <input list="categories" id="postCategory" name="postCategory" placeholder="Category"/>
+
+                    <datalist id="categories">
+                        <option value="Category1">
+                        <option value="Category2">
+                        <option value="Category3">
+                    </datalist> -->
+
+                    <textarea name="body" id="postBody" cols="30" rows="10" placeholder="Your post..." ></textarea>
+
+                    <button type="submit">
+                        Publish
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <% posts.forEach(post => { %>
+            <div class="posts">
+                <div class="postsNameAndCategory">
+                    <p><%= post.title %> </p>
+                    
+                    <a href="#">
+                        Category 1
+                    </a>
+    
+                    <a href="#">
+                        Category 2
+                    </a>
+                </div>
+    
+                <div class="postsBody">
+                    <%= post.body %> 
+                </div>
+    
+                <div class="postsMetrics">
+                    <a href="/posts/<%= post._id %> " class="postsButton">
+                        More
+                    </a>
+    
+                    <div class="postsIcons"> 
+                        <div>
+                            <img src="../public/icons/Show.svg" alt="">
+                            25
+                        </div>
+    
+                        <div>
+                            <img src="../public/icons/Heart.svg" alt="">
+                            25
+                        </div>
+    
+                        <div>
+                            <img src="../public/icons/Chat.svg" alt="">
+                            25
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    <script src="../public/css/profile/modal.js"></script>
+</body>
+</html>

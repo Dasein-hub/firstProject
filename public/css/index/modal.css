@@ -1,0 +1,97 @@
+.modalSignIn {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalLogIn {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 20%;
+}
+
+.modal-content h1 {
+    margin-bottom: 10px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+
+    margin-bottom: 10px;
+}
+
+.closeLogIn {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+
+    margin-bottom: 10px;
+}
+
+.modal-content form input {
+    height: 30px;
+
+    margin-bottom: 10px;
+
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding-left: 10px;
+}
+
+.modal-content form button {
+    width: 100%;
+    height: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+
+    margin-left: 0;
+}

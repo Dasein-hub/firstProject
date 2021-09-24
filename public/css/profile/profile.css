@@ -1,0 +1,143 @@
+.profile {
+    display: flex;
+
+    margin-top: 85px;
+}
+
+.profileImg {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.profileImg img {
+    margin-bottom: 15px;
+}
+
+.profileImg button {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    cursor: pointer;
+
+    padding: 7px 45px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 150px;
+}
+
+.profileInfo p {
+    margin-bottom: 10px;
+}
+
+#lastP {
+    margin-bottom: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+#postTitle {
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    outline: none;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#postCategory {
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    width: 100px;
+    height: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+#postBody {
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    height: 200px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+.postsMetricsProfile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+
+    margin-bottom: 10px;
+}
+
+.modal-content form button {
+    width: 70px;
+    height: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+}

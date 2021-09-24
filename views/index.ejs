@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/index/posts.css">
+    <link rel="stylesheet" href="../public/css/index/modal.css">
+    <title>Main</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header">
+                <h1>Blog</h1>
+
+                <form action="/blogs" method="get">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                </form>
+
+                <div class="button">
+                    <% if (user) { %>
+                        <a href="/logout" class="signInButton">
+                            Log out
+                        </a>
+                    <% } else {%>
+                        <button class="signInButton">
+                            Sign in
+                        </button>
+    
+                        <div class="modalSignIn" id="myModal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+    
+                                <h1>
+                                    Sign in
+                                </h1>
+                
+                                <form action="/signin" method="post">
+                                    <input type="text" name="username" id="userName" placeholder="Username">
+    
+                                    <input type="text" name="email" id="userEmail" placeholder="Email">
+    
+                                    <input type="text" name="password" id="userPassword" placeholder="Password">
+                
+                                    <button type="submit">
+                                        Register
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+            
+                        <button class="logInButton">
+                            Log in
+                        </button>
+    
+                        <div class="modalLogIn" id="myModal">
+                            <div class="modal-content">
+                                <span class="closeLogIn">&times;</span>
+    
+                                <h1>
+                                    Log in
+                                </h1>
+                
+                                <form action="/login" method="post">
+                                    <input type="text" name="username" id="userName" placeholder="Username">
+    
+                                    <input type="text" name="password" id="userPassword" placeholder="Password">
+                
+                                    <button type="submit">
+                                        Log in
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    <% } %>  
+                </div>
+            </div>
+
+            <div class="header filters">
+                <a href="">
+                    Back end
+                </a>
+                
+                <a href="">
+                    Front end
+                </a>
+                
+                <a href="">
+                    Programming
+                </a>
+                
+                <a href="">
+                    Development
+                </a>
+                
+                <a href="">
+                    Dev Ops
+                </a>
+            </div>
+        </header>
+
+        <% posts.forEach(post => { %>
+            <div class="posts">
+                <div class="postsNameAndCategory">
+                    <p><%= post.title %> </p>
+                    
+                    <a href="#">
+                        Category 1
+                    </a>
+    
+                    <a href="#">
+                        Category 2
+                    </a>
+                </div>
+    
+                <div class="postsBody">
+                    <%= post.body %> 
+                </div>
+    
+                <div class="postsMetrics">
+                    <a href="/posts/<%= post._id %> " class="postsButton">
+                        More
+                    </a>
+    
+                    <div class="postsIcons"> 
+                        <div>
+                            <img src="../public/icons/Show.svg" alt="">
+                            25
+                        </div>
+    
+                        <div>
+                            <img src="../public/icons/Heart.svg" alt="">
+                            25
+                        </div>
+    
+                        <div>
+                            <img src="../public/icons/Chat.svg" alt="">
+                            25
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    <script src="../public/css/index/modal.js"></script>
+</body>
+</html>

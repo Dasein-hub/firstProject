@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+#search {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    height: 30px;
+    width: 300px;
+
+    padding: 5px 10px;
+}
+
+.filters {
+    justify-content: space-evenly;
+}
+
+.filters a {
+    text-decoration: none;
+    color: black;
+
+    font-size: 18px;
+}
+
+.button button {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 7px 15px;
+    margin-left: 15px;
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.button a {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 7px 15px;
+    margin-left: 15px;
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    cursor: pointer;
+}
