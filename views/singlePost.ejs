@@ -120,7 +120,7 @@
 
             <% if (user) { %>
                 <div class="commentSubmit">
-                    <form action="/posts/<%= post._id %> " method="post">
+                    <form action="/singlePost/<%= post._id %> " method="post">
                         <img src="../public/img/imgPlaceholder.png" alt="">
     
                         <input type="text" name="body" id="commentBody" placeholder="Your comment...">

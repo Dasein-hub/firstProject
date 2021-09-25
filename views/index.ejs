@@ -38,7 +38,7 @@
                                 </h1>
                 
                                 <form action="/signin" method="post">
-                                    <input type="text" name="username" id="userName" placeholder="Username">
+                                    <input type="text" name="name" id="userName" placeholder="Username">
     
                                     <input type="text" name="email" id="userEmail" placeholder="Email">
     
@@ -64,7 +64,7 @@
                                 </h1>
                 
                                 <form action="/login" method="post">
-                                    <input type="text" name="username" id="userName" placeholder="Username">
+                                    <input type="text" name="name" id="userName" placeholder="Username">
     
                                     <input type="text" name="password" id="userPassword" placeholder="Password">
                 
@@ -120,7 +120,7 @@
                 </div>
     
                 <div class="postsMetrics">
-                    <a href="/posts/<%= post._id %> " class="postsButton">
+                    <a href="/singlePost/<%= post._id %> " class="postsButton">
                         More
                     </a>
     

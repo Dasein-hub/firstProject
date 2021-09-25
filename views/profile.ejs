@@ -52,14 +52,6 @@
                 <form action="/profile" method="post">
                     <input type="text" name="title" id="postTitle" placeholder="Post title">
 
-                    <!-- <input list="categories" id="postCategory" name="postCategory" placeholder="Category"/>
-
-                    <datalist id="categories">
-                        <option value="Category1">
-                        <option value="Category2">
-                        <option value="Category3">
-                    </datalist> -->
-
                     <textarea name="body" id="postBody" cols="30" rows="10" placeholder="Your post..." ></textarea>
 
                     <button type="submit">
@@ -88,7 +80,7 @@
                 </div>
     
                 <div class="postsMetrics">
-                    <a href="/posts/<%= post._id %> " class="postsButton">
+                    <a href="/singlePost/<%= post._id %> " class="postsButton">
                         More
                     </a>
     
